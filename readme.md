@@ -9,6 +9,7 @@ The MAPPO baseline comes from https://github.com/uoe-agents/epymarl.
 
 # Table of Contents
 - [Dependencies](#Dependencies)
+- [Installation](#Installation)
 - [Running iPLAN](#Running-iPLAN)
 - [Ablation Study](#Ablation-Study)
   - [IPPO](#Running-IPPO), [IPPO-BM](#Running-IPPO-BM), [IPPO-GAT](#Running-IPPO-GAT), 
@@ -34,6 +35,11 @@ environment with our modified Highway-env given in `highway_env` folder. Also,
 [Multi-agent Particles](https://github.com/openai/multiagent-particle-envs) used in our repo are different. Please use 
 the code given in `envs/mpe` folder.
  
+# Installation
+```angular2html
+pip install iPLAN==0.0.1
+```
+
 # Running iPLAN
 In the configuration file `config/default.yaml`, set up environments needed for your experiment:
 * Set environment `env`: `MPE` for Non-cooperative Navigation and `highway` for Heterogeneous Highway
