@@ -22,7 +22,7 @@ The MAPPO baseline comes from https://github.com/uoe-agents/epymarl.
 - [Animation](#Animation)
 - [Citation](#Citation)
 
-## Dependencies
+# Dependencies
 * [PyTorch](https://pytorch.org/) (1.13.1 + cu116) (GPU)
 * [stable-baselines3](https://github.com/DLR-RM/stable-baselines3)
 * [highway-env](https://github.com/Farama-Foundation/HighwayEnv/tree/master)
@@ -34,7 +34,7 @@ environment with our modified Highway-env given in `highway_env` folder. Also,
 [Multi-agent Particles](https://github.com/openai/multiagent-particle-envs) used in our repo are different. Please use 
 the code given in `envs/mpe` folder.
  
-## Running iPLAN
+# Running iPLAN
 In the configuration file `config/default.yaml`, set up environments needed for your experiment:
 * Set environment `env`: `MPE` for Non-cooperative Navigation and `highway` for Heterogeneous Highway
 * Set difficulty level `difficulty`: 
@@ -47,43 +47,43 @@ In the configuration file `config/default.yaml`, set up environments needed for 
 
 Results, including printed logs, saved models and tensorboard logger, are stored in the folder `results` 
 
-## Ablation Study
+# Ablation Study
 When running experiments for ablation study, please only change the hyperparameters mentioned 
 and keep those the same as they are in the iPLAN experiment.
-### Running IPPO
+## Running IPPO
 * Set `Behavior_enable: False`
 * Set `GAT_enable: False` and `GAT_use_behavior: False`
 * Run `main.py`
 
-### Running IPPO-BM
+## Running IPPO-BM
 * Set `Behavior_enable: True`
 * Set `GAT_enable: False` and `GAT_use_behavior: False`
 * Run `main.py`
 
-### Running IPPO-GAT
+## Running IPPO-GAT
 * Set `Behavior_enable: False`
 * Set `GAT_enable: True` and `GAT_use_behavior: True`
 * Run `main.py`
 
-### Running iPLAN-Hard
+## Running iPLAN-Hard
 * Set `soft_update_enable: False`
 * Run `main.py`
 
-### Running iPLAN-FC
+## Running iPLAN-FC
 * Set `behavior_fully_connected: True`
 * Run `main.py`
 
-## Baselines
+# Baselines
 Baselines used in this paper could be found in the `baselines`folder, where the organization of files is 
 similar to the main directory of iPLAN. Please change the environment setting in `config/default.yaml` 
 before experiments. No extra changes need.
 * [QMIX](https://github.com/oxwhirl/pymarl) `baselines/QMIX/main.py`
 * [MAPPO](https://github.com/uoe-agents/epymarl) `baselines/MAPPO/main.py`
 
-## Helper Functions
+# Helper Functions
 Notebooks for helper function are given in `helper` folder.
 Please follow the instructions below:
-### Compute Navigation Metrics
+## Compute Navigation Metrics
 (Only for Heterogeneous Highway)
 In the configuration file `config/default.yaml`
 * Set `metrics_enable: True`
@@ -95,7 +95,7 @@ Then you will get printed navigation metrics after the execution logs of each ep
 To compute the navigation metrics, use the notebook `helper/RL_results_metrics.ipynb` to compute averaged navigation 
 metrics from the printed log file (usually given in `results/sacred`).
 
-### Generate Animation
+## Generate Animation
 (Only for Heterogeneous Highway)
 In the configuration file `config/default.yaml`
 * Set `animation_enable: True`
@@ -105,7 +105,7 @@ In the configuration file `config/default.yaml`
 Screenshots of the Heterogeneous Highway are stored in the `animation` folder. Use the notebook 
 `helper/Gif_helper.ipynb` to generate animation from screenshots.
 
-### Plot Reward Curve
+## Plot Reward Curve
 The printed log file are usually given in `results/sacred`.
 * Choose the log file you want to recover, use the notebook `helper/RL_results_repack.ipynb`
 to convert the log file into `.csv` file.
@@ -113,7 +113,7 @@ to convert the log file into `.csv` file.
 `RL Visualization Helper - MPE.ipynb` (Non-cooperative Navigation) to plot the reward curve 
 from the generated `.csv` files for each approaches and scenarios.
 
-## Results
+# Results
 <p align="center">
     <img src="figs/MPE_comb.png"><br/>
     <em> Non-Cooperative Navigation: with 3 agents in the (left) easy and (right) hard scenarios. 50 steps/episode. </em>
@@ -123,7 +123,7 @@ from the generated `.csv` files for each approaches and scenarios.
     <em> Heterogeneous Highway: with 5 agents in (left) mild and (right) chaotic scenarios. 90 steps/episode. </em>
 </p>
 
-## Animation
+# Animation
 <p align="center">
     <img src="animation/iPLAN_Hetero_E_5_90.0_23.95.gif"><br/>
     <em> iPLAN in mild (easy) scenario of Heterogeneous Highway 
@@ -160,7 +160,7 @@ from the generated `.csv` files for each approaches and scenarios.
     (Num of agents succeed: 3, Avg. survival time: 67.8, Avg. speed: 24.9).</em>
 </p>
 
-## Citation
+# Citation
 ```
 @article{wu2023iplan,
   title={iPLAN: Intent-Aware Planning in Heterogeneous Traffic via Distributed Multi-Agent Reinforcement Learning},
