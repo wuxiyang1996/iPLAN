@@ -1,0 +1,18 @@
+env: MPE
+scenario_name: simple_spread_Hetero
+
+num_agents: 3
+num_landmarks: 3
+episode_length: 50
+
+num_normal_agents: 1
+num_tiny_agents: 1
+num_bulky_agents: 1
+num_random_agents: 1
+
+world_size: 1.0
+obs_shape_single: 4
+
+init_sample_size: 5
+
+n_actions: 5
