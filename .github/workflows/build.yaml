@@ -22,6 +22,7 @@ jobs:
         python-version: 3.7
     - name: Install dependencies
       run: |
+        pip install --upgrade pip
         pip install stable-baselines3[extra] pyyaml sacred
         pip install Heterogeneous_Highway_Env
         pip install -e .[deploy]
