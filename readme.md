@@ -1,43 +1,56 @@
-# iPLAN
+<p align="center">
+    <img src="animation/iPLAN_Hetero_H_5_90.0_21.81.gif"><br/>
+</p>
 
 This repository is the codebase for our paper.
 
-[iPLAN: Intent-Aware Planning in Heterogeneous Traffic via Distributed Multi-Agent Reinforcement Learning](https://arxiv.org/abs/2306.06236)
+[**iPLAN: Intent-Aware Planning in Heterogeneous Traffic via Distributed Multi-Agent Reinforcement Learning**](https://arxiv.org/abs/2306.06236)
 
-This repository was originally forked from https://github.com/oxwhirl/pymarl and https://github.com/carolinewang01/dm2. 
-The MAPPO baseline comes from https://github.com/uoe-agents/epymarl.
+This repository was originally **forked from https://github.com/oxwhirl/pymarl** 
+and **https://github.com/carolinewang01/dm2**. 
+The MAPPO baseline comes from **https://github.com/uoe-agents/epymarl**.
 
 # Table of Contents
-- [Dependencies](#Dependencies)
-- [Installation](#Installation)
-- [Running iPLAN](#Running-iPLAN)
-- [Ablation Study](#Ablation-Study)
-  - [IPPO](#Running-IPPO), [IPPO-BM](#Running-IPPO-BM), [IPPO-GAT](#Running-IPPO-GAT), 
-  [iPLAN-Hard](#Running-iPLAN-Hard), [iPLAN-FC](#Running-iPLAN-FC)
-- [Baselines](#Baselines)
-- [Helper Functions](#Helper-Functions)
-  - [Compute Navigation Metrics](#Compute-Navigation-Metrics)
-  - [Generate Animation](#Generate-Animation)
-  - [Plot Reward Curve](#Plot-Reward-Curve)
-- [Results](#Results)
-- [Animation](#Animation)
-- [Citation](#Citation)
+- [**Dependencies**](#Dependencies)
+- [**Installation**](#Installation)
+- [**Running iPLAN**](#Running-iPLAN)
+- [**Ablation Study**](#Ablation-Study)
+  - [**IPPO**](#Running-IPPO), [**IPPO-BM**](#Running-IPPO-BM), [**IPPO-GAT**](#Running-IPPO-GAT), 
+  [**iPLAN-Hard**](#Running-iPLAN-Hard), [**iPLAN-FC**](#Running-iPLAN-FC)
+- [**Baselines**](#Baselines)
+- [**Helper Functions**](#Helper-Functions)
+  - [**Compute Navigation Metrics**](#Compute-Navigation-Metrics)
+  - [**Generate Animation**](#Generate-Animation)
+  - [**Plot Reward Curve**](#Plot-Reward-Curve)
+- [**Results**](#Results)
+- [**Animation**](#Animation)
+- [**Citation**](#Citation)
 
 # Dependencies
-* [PyTorch](https://pytorch.org/) (1.13.1 + cu116) (GPU)
-* [stable-baselines3](https://github.com/DLR-RM/stable-baselines3)
-* [highway-env](https://github.com/Farama-Foundation/HighwayEnv/tree/master)
-* [scared](https://sacred.readthedocs.io/en/stable/quickstart.html)
-* [PyYAML](https://pypi.org/project/PyYAML/)
+* [**PyTorch**](https://pytorch.org/) (1.13.1 + cu116) (GPU)
+* [**stable-baselines3**](https://github.com/DLR-RM/stable-baselines3)
+* [**Heterogeneous_Highway_Env**](https://github.com/wuxiyang1996/Heterogeneous_Highway_Env) (Forked from
+[**highway-env**](https://github.com/Farama-Foundation/HighwayEnv/tree/master))
+* [**scared**](https://sacred.readthedocs.io/en/stable/quickstart.html)
+* [**PyYAML**](https://pypi.org/project/PyYAML/)
 
-**Note**: Please replace the initial [Highway-env](https://github.com/Farama-Foundation/HighwayEnv) in your compiling 
-environment with our modified Highway-env given in `highway_env` folder. Also, 
-[Multi-agent Particles](https://github.com/openai/multiagent-particle-envs) used in our repo are different. Please use 
+**Note**: Please our modified Highway-env given in [**Heterogeneous_Highway_Env**](https://github.com/wuxiyang1996/Heterogeneous_Highway_Env)
+as there are major changes from the initial version of [**highway-env**](https://github.com/Farama-Foundation/HighwayEnv/tree/master). Also, 
+[**Multi-agent Particles**](https://github.com/openai/multiagent-particle-envs) used in our repo are different. Please use 
 the code given in `envs/mpe` folder.
  
 # Installation
+First, install dependencies
 ```angular2html
-pip install iPLAN==0.0.1
+pip install stable-baselines3[extra] pyyaml sacred
+```
+Then install our forked version of Highway-env
+```angular2html
+pip install Heterogeneous_Highway_Env
+```
+Finally, install iPLAN package
+```angular2html
+pip install iPLAN
 ```
 
 # Running iPLAN
@@ -49,42 +62,43 @@ In the configuration file `config/default.yaml`, set up environments needed for 
 * Set `Behavior_enable: True`
 * Set `GAT_enable: True` and `GAT_use_behavior: True`
 * Set `soft_update_enable: True` and `behavior_fully_connected: False`
-* Run `main.py`
+* Run `python3 main.py`
 
 Results, including printed logs, saved models and tensorboard logger, are stored in the folder `results` 
 
 # Ablation Study
 When running experiments for ablation study, please only change the hyperparameters mentioned 
+in the configuration file `config/default.yaml`
 and keep those the same as they are in the iPLAN experiment.
 ## Running IPPO
 * Set `Behavior_enable: False`
 * Set `GAT_enable: False` and `GAT_use_behavior: False`
-* Run `main.py`
+* Run `python3 main.py`
 
 ## Running IPPO-BM
 * Set `Behavior_enable: True`
 * Set `GAT_enable: False` and `GAT_use_behavior: False`
-* Run `main.py`
+* Run `python3 main.py`
 
 ## Running IPPO-GAT
 * Set `Behavior_enable: False`
 * Set `GAT_enable: True` and `GAT_use_behavior: True`
-* Run `main.py`
+* Run `python3 main.py`
 
 ## Running iPLAN-Hard
 * Set `soft_update_enable: False`
-* Run `main.py`
+* Run `python3 main.py`
 
 ## Running iPLAN-FC
 * Set `behavior_fully_connected: True`
-* Run `main.py`
+* Run `python3 main.py`
 
 # Baselines
 Baselines used in this paper could be found in the `baselines`folder, where the organization of files is 
 similar to the main directory of iPLAN. Please change the environment setting in `config/default.yaml` 
 before experiments. No extra changes need.
-* [QMIX](https://github.com/oxwhirl/pymarl) `baselines/QMIX/main.py`
-* [MAPPO](https://github.com/uoe-agents/epymarl) `baselines/MAPPO/main.py`
+* [**QMIX**](https://github.com/oxwhirl/pymarl): Run `python3 baselines/QMIX/main.py`
+* [**MAPPO**](https://github.com/uoe-agents/epymarl): Run `python3 baselines/MAPPO/main.py`
 
 # Helper Functions
 Notebooks for helper function are given in `helper` folder.
@@ -94,7 +108,7 @@ Please follow the instructions below:
 In the configuration file `config/default.yaml`
 * Set `metrics_enable: True`
 * Set `num_test_episodes` larger than `batch_size_run`
-* Run `main.py`
+* Run `python3 main.py`
 
 Then you will get printed navigation metrics after the execution logs of each episode.
 
@@ -130,6 +144,9 @@ from the generated `.csv` files for each approaches and scenarios.
 </p>
 
 # Animation
+We visually compare the performance of iPLAN
+with QMIX and MAPPO. Each baseline is tested with multiple learning agents shown in green, and each animation
+shows 5 such learning agents from their respective viewpoints. 
 <p align="center">
     <img src="animation/iPLAN_Hetero_E_5_90.0_23.95.gif"><br/>
     <em> iPLAN in mild (easy) scenario of Heterogeneous Highway 

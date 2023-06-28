@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="iPLAN",
-    version="0.0.1",
+    version="0.1.0",
     author="Xiyang Wu",
     author_email="wuxiyang1996@gmail.com",
     description="Codebase for iPLAN: Intent-Aware Planning in Heterogeneous Traffic via "
