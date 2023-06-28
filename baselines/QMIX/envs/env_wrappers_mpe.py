@@ -125,13 +125,6 @@ class ShareVecEnv(ABC):
         """
         raise NotImplementedError
 
-    @property
-    def unwrapped(self):
-        if isinstance(self, VecEnvWrapper):
-            return self.venv.unwrapped
-        else:
-            return self
-
     def get_viewer(self):
         if self.viewer is None:
             from gym.envs.classic_control import rendering
