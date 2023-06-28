@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="animation/iPLAN_Hetero_H_5_90.0_21.81.gif"><br/>
+    <img src="iPLAN/animation/iPLAN_Hetero_H_5_90.0_21.81.gif"><br/>
 </p>
 
 This repository is the codebase for our paper.
@@ -135,11 +135,11 @@ from the generated `.csv` files for each approaches and scenarios.
 
 # Results
 <p align="center">
-    <img src="figs/MPE_comb.png"><br/>
+    <img src="iPLAN/figs/MPE_comb.png"><br/>
     <em> Non-Cooperative Navigation: with 3 agents in the (left) easy and (right) hard scenarios. 50 steps/episode. </em>
 </p>
 <p align="center">
-    <img src="figs/Hetero_comb.png"><br/>
+    <img src="iPLAN/figs/Hetero_comb.png"><br/>
     <em> Heterogeneous Highway: with 5 agents in (left) mild and (right) chaotic scenarios. 90 steps/episode. </em>
 </p>
 
@@ -148,37 +148,37 @@ We visually compare the performance of iPLAN
 with QMIX and MAPPO. Each baseline is tested with multiple learning agents shown in green, and each animation
 shows 5 such learning agents from their respective viewpoints. 
 <p align="center">
-    <img src="animation/iPLAN_Hetero_E_5_90.0_23.95.gif"><br/>
+    <img src="iPLAN/animation/iPLAN_Hetero_E_5_90.0_23.95.gif"><br/>
     <em> iPLAN in mild (easy) scenario of Heterogeneous Highway 
     (Num of agents succeed: 5, Avg. survival time: 90, Avg. speed: 23.95).</em>
 </p>
 
 <p align="center">
-    <img src="animation/iPLAN_Hetero_H_5_90.0_21.81.gif"><br/>
+    <img src="iPLAN/animation/iPLAN_Hetero_H_5_90.0_21.81.gif"><br/>
     <em> iPLAN in chaotic (hard) scenario of Heterogeneous Highway 
     (Num of agents succeed: 5, Avg. survival time: 90, Avg. speed: 21.81).</em>
 </p>
 
 <p align="center">
-    <img src="animation/MAPPO_Hetero_E_2_49.6_28.44.gif"><br/>
+    <img src="iPLAN/animation/MAPPO_Hetero_E_2_49.6_28.44.gif"><br/>
     <em> MAPPO in mild (easy) scenario of Heterogeneous Highway 
     (Num of agents succeed: 2, Avg. survival time: 49.6, Avg. speed: 28.44).</em>
 </p>
 
 <p align="center">
-    <img src="animation/MAPPO_Hetero_H_2_54.0_28.66.gif"><br/>
+    <img src="iPLAN/animation/MAPPO_Hetero_H_2_54.0_28.66.gif"><br/>
     <em> MAPPO in chaotic (hard) scenario of Heterogeneous Highway 
     (Num of agents succeed: 2, Avg. survival time: 54.0, Avg. speed: 28.44).</em>
 </p>
 
 <p align="center">
-    <img src="animation/QMIX_Hetero_E_4_72.6_21.2.gif"><br/>
+    <img src="iPLAN/animation/QMIX_Hetero_E_4_72.6_21.2.gif"><br/>
     <em> QMIX in mild (easy) scenario of Heterogeneous Highway 
     (Num of agents succeed: 4, Avg. survival time: 72.6, Avg. speed: 21.2).</em>
 </p>
 
 <p align="center">
-    <img src="animation/QMIX_Hetero_H_3_67.8_24.9.gif"><br/>
+    <img src="iPLAN/animation/QMIX_Hetero_H_3_67.8_24.9.gif"><br/>
     <em> QMIX in chaotic (hard) scenario of Heterogeneous Highway 
     (Num of agents succeed: 3, Avg. survival time: 67.8, Avg. speed: 24.9).</em>
 </p>
