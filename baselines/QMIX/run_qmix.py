@@ -18,7 +18,7 @@ from components.episode_buffer import ReplayBuffer
 from utils.mappo_utils.separated_buffer import SeparatedReplayBuffer
 from components.transforms import OneHot
 
-import highway_env
+import Heterogeneous_Highway_Env as highway_env
 import gym
 from envs.env_wrappers import SubprocVecEnv
 from envs.env_wrappers_mpe import SubprocVecEnv as SubprocVecEnv_mpe
