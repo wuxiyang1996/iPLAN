@@ -22,21 +22,21 @@ The MAPPO baseline comes from **https://github.com/uoe-agents/epymarl**.
 *   Representation Learning
 
 # Table of Contents
-- [**About**](#About)
-- [**Dependencies**](#Dependencies)
-- [**Installation**](#Installation)
-- [**Running iPLAN**](#Running-iPLAN)
-- [**Ablation Study**](#Ablation-Study)
-- [**IPPO**](#Running-IPPO), [**IPPO-BM**](#Running-IPPO-BM), [**IPPO-GAT**](#Running-IPPO-GAT), 
+-   [**About**](#About)
+-   [**Dependencies**](#Dependencies)
+-   [**Installation**](#Installation)
+-   [**Running iPLAN**](#Running-iPLAN)
+-   [**Ablation Study**](#Ablation-Study)
+-   [**IPPO**](#Running-IPPO), [**IPPO-BM**](#Running-IPPO-BM), [**IPPO-GAT**](#Running-IPPO-GAT), 
   [**iPLAN-Hard**](#Running-iPLAN-Hard), [**iPLAN-FC**](#Running-iPLAN-FC)
-- [**Baselines**](#Baselines)
-- [**Helper Functions**](#Helper-Functions)
+-   [**Baselines**](#Baselines)
+-   [**Helper Functions**](#Helper-Functions)
   - [**Compute Navigation Metrics**](#Compute-Navigation-Metrics)
   - [**Generate Animation**](#Generate-Animation)
   - [**Plot Reward Curve**](#Plot-Reward-Curve)
-- [**Results**](#Results)
-- [**Animation**](#Animation)
-- [**Citation**](#Citation)
+-   [**Results**](#Results)
+-   [**Animation**](#Animation)
+-   [**Citation**](#Citation)
 
 # Dependencies
 *   [**PyTorch**](https://pytorch.org/) (1.13.1 + cu116) (GPU)
