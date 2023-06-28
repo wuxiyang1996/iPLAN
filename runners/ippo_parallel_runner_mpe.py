@@ -1,11 +1,7 @@
 from functools import partial
-import torch
 from components.episode_buffer import EpisodeBatch
 import numpy as np
 from observation_wrapper import observersation_state_history_wrapper
-from utils.mappo_utils.util import get_shape_from_act_space, get_shape_from_obs_space
-import time
-from PIL import Image
 
 class ParallelRunner:
     def __init__(self, args, env, logger):

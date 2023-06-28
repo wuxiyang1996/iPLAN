@@ -9,11 +9,8 @@ import torch.nn as nn
 from components.episode_buffer import EpisodeBatch
 from controllers.dcntrl_controller import DcntrlMAC
 from utils.mappo_utils.util import get_grad_norm, huber_loss, mse_loss
-from utils.mappo_utils.valuenorm import ValueNorm
 from utils.mappo_utils.separated_buffer import SeparatedReplayBuffer
 from utils.mappo_utils.util import check, update_linear_schedule
-import utils.mappo_utils.separated_buffer as sbuffer
-# from learners.gail_learner import GailDiscriminator
 
 np.set_printoptions(threshold=sys.maxsize)
 
