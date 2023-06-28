@@ -1,4 +1,4 @@
-
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/wuxiyang1996/iPLAN/.github%2Fworkflows%2Fbuild.yaml)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/f99f2bdc412b44029cf68647df881538)](https://app.codacy.com/gh/wuxiyang1996/iPLAN/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
 [![Downloads](https://img.shields.io/pypi/dm/iPLAN)](https://pypi.org/project/iPLAN/)
 ![GitHub](https://img.shields.io/github/license/wuxiyang1996/iPLAN)
