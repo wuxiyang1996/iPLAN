@@ -17,20 +17,20 @@ and **https://github.com/carolinewang01/dm2**.
 The MAPPO baseline comes from **https://github.com/uoe-agents/epymarl**.
 
 # Table of Contents
--   [**Dependencies**](#Dependencies)
--   [**Installation**](#Installation)
--   [**Running iPLAN**](#Running-iPLAN)
--   [**Ablation Study**](#Ablation-Study)
--   [**IPPO**](#Running-IPPO), [**IPPO-BM**](#Running-IPPO-BM), [**IPPO-GAT**](#Running-IPPO-GAT), 
+- [**Dependencies**](#Dependencies)
+- [**Installation**](#Installation)
+- [**Running iPLAN**](#Running-iPLAN)
+- [**Ablation Study**](#Ablation-Study)
+- [**IPPO**](#Running-IPPO), [**IPPO-BM**](#Running-IPPO-BM), [**IPPO-GAT**](#Running-IPPO-GAT), 
   [**iPLAN-Hard**](#Running-iPLAN-Hard), [**iPLAN-FC**](#Running-iPLAN-FC)
--   [**Baselines**](#Baselines)
--   [**Helper Functions**](#Helper-Functions)
-  -   [**Compute Navigation Metrics**](#Compute-Navigation-Metrics)
-  -   [**Generate Animation**](#Generate-Animation)
-  -   [**Plot Reward Curve**](#Plot-Reward-Curve)
--   [**Results**](#Results)
--   [**Animation**](#Animation)
--   [**Citation**](#Citation)
+- [**Baselines**](#Baselines)
+- [**Helper Functions**](#Helper-Functions)
+  - [**Compute Navigation Metrics**](#Compute-Navigation-Metrics)
+  - [**Generate Animation**](#Generate-Animation)
+  - [**Plot Reward Curve**](#Plot-Reward-Curve)
+- [**Results**](#Results)
+- [**Animation**](#Animation)
+- [**Citation**](#Citation)
 
 # Dependencies
 *   [**PyTorch**](https://pytorch.org/) (1.13.1 + cu116) (GPU)
@@ -61,14 +61,14 @@ pip install iPLAN
 
 # Running iPLAN
 In the configuration file `config/default.yaml`, set up environments needed for your experiment:
-*   Set environment `env`: `MPE` for Non-cooperative Navigation and `highway` for Heterogeneous Highway
-*   Set difficulty level `difficulty`: 
-  *   `easy` for easy (Non-cooperative Navigation) or mild (Heterogeneous Highway) scenario.
+* Set environment `env`: `MPE` for Non-cooperative Navigation and `highway` for Heterogeneous Highway
+* Set difficulty level `difficulty`: 
+  * `easy` for easy (Non-cooperative Navigation) or mild (Heterogeneous Highway) scenario.
   * `hard` for hard (Non-cooperative Navigation) or chaotic (Heterogeneous Highway) scenario.
-*   Set `Behavior_enable: True`
-*   Set `GAT_enable: True` and `GAT_use_behavior: True`
-*   Set `soft_update_enable: True` and `behavior_fully_connected: False`
-*   Run `python3 main.py`
+* Set `Behavior_enable: True`
+* Set `GAT_enable: True` and `GAT_use_behavior: True`
+* Set `soft_update_enable: True` and `behavior_fully_connected: False`
+* Run `python3 main.py`
 
 Results, including printed logs, saved models and tensorboard logger, are stored in the folder `results` 
 
