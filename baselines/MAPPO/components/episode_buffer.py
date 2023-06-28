@@ -74,8 +74,8 @@ class EpisodeBatch:
             else:
                 self.data.transition_data[field_key] = th.zeros((batch_size, max_seq_length, *shape), dtype=dtype, device=self.device)
 
-    def extend(self, scheme, groups=None):
-        self._setup_data(scheme, self.groups if groups is None else groups, self.batch_size, self.max_seq_length)
+    # def extend(self, scheme, groups=None):
+    #     self._setup_data(scheme, self.groups if groups is None else groups, self.batch_size, self.max_seq_length)
 
     def to(self, device):
         for k, v in self.data.transition_data.items():
