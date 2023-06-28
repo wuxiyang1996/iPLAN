@@ -1,0 +1,52 @@
+# --- IPPO specific parameters ---
+# optimizer settings
+weight_decay: 0
+
+# default ppo parameters
+ppo_epoch: 15
+use_clipped_value_loss: True
+use_linear_lr_decay: False # TEST TO SEE WHICH IS BETTER
+clip_param: 0.2
+num_mini_batch: 1
+data_chunk_length: 10 # time lengths of chunks to train recurrent policy
+value_loss_coef: 0.5
+entropy_coef: 0.01
+use_max_grad_norm: True
+max_grad_norm: 10.0 # 0.5
+use_gae: True
+gae_lambda: 0.95
+use_proper_time_limits: True
+use_huber_loss: True
+huber_delta: 10.0
+
+# actor/critic parameters
+gain: 0.01
+use_orthogonal: True # if False, use xavier uniform initialization, else use orthogonal
+use_policy_active_masks: True
+use_value_active_masks: True
+# use_naive_recurrent_policy: False
+use_recurrent_policy: True 
+recurrent_N: 1 # number of recurrent layers
+rnn_hidden_dim: 64
+# mlp base
+use_ReLU: True # if false, use tanh
+stacked_frames: 1
+layer_N: 1
+mlp_hidden_dim: 64
+# normalization
+use_feature_normalization: True # apply layernorm to normalize inputs
+# use_valuenorm: True # use running mean and std to normalize rewards
+use_popart: True # use PopArt to normalize rewards
+
+# --- PYMARL IQL PARAMETERS
+# These parameters should be unused
+action_selector: "epsilon_greedy"
+epsilon_start: 1.0
+epsilon_finish: 0.05
+epsilon_anneal_time: 50000
+agent_output_type: None # unused
+
+# --- PYMARL IPPO PARAMETERS
+runner: "ippo"
+learner: "ippo_learner"
+name: "ippo"
