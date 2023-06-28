@@ -47,8 +47,7 @@ class IPPOLearner:
         self.log_prefix = args.log_prefix
         self.log_stats_t = -self.args.learner_log_interval - 1
 
-        self.buffers = [SeparatedReplayBuffer(args,  self.obs_shape, self.state_shape)
-                        for _ in range(self.n_agents)]
+        self.buffers = [SeparatedReplayBuffer(args) for _ in range(self.n_agents)]
 
         self.clip_param = self.args.clip_param
         self.ppo_epoch = self.args.ppo_epoch

@@ -12,8 +12,7 @@ def _cast(x):
 
 
 class SeparatedReplayBuffer(object):
-    def __init__(self, args, obs_shape, share_obs_shape 
-                 ):
+    def __init__(self, args):
         self.episode_limit = args.episode_limit   # max ep len
         self.buffer_size = args.buffer_size  # originally n_rollout_threads
         self.thread_id = 0
