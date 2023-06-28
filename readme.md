@@ -16,7 +16,13 @@ This repository was originally **forked from https://github.com/oxwhirl/pymarl**
 and **https://github.com/carolinewang01/dm2**. 
 The MAPPO baseline comes from **https://github.com/uoe-agents/epymarl**.
 
+# About
+* Multi-agent Reinforcement Learning
+* Autonoumous Driving
+* Representation Learning
+
 # Table of Contents
+- [**About**](#About)
 - [**Dependencies**](#Dependencies)
 - [**Installation**](#Installation)
 - [**Running iPLAN**](#Running-iPLAN)
