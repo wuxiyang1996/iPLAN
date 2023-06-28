@@ -33,12 +33,12 @@ The MAPPO baseline comes from **https://github.com/uoe-agents/epymarl**.
 -   [**Citation**](#Citation)
 
 # Dependencies
-* [**PyTorch**](https://pytorch.org/) (1.13.1 + cu116) (GPU)
-* [**stable-baselines3**](https://github.com/DLR-RM/stable-baselines3)
-* [**Heterogeneous_Highway_Env**](https://github.com/wuxiyang1996/Heterogeneous_Highway_Env) (Forked from
+*   [**PyTorch**](https://pytorch.org/) (1.13.1 + cu116) (GPU)
+*   [**stable-baselines3**](https://github.com/DLR-RM/stable-baselines3)
+*   [**Heterogeneous_Highway_Env**](https://github.com/wuxiyang1996/Heterogeneous_Highway_Env) (Forked from
 [**highway-env**](https://github.com/Farama-Foundation/HighwayEnv/tree/master))
-* [**scared**](https://sacred.readthedocs.io/en/stable/quickstart.html)
-* [**PyYAML**](https://pypi.org/project/PyYAML/)
+*   [**scared**](https://sacred.readthedocs.io/en/stable/quickstart.html)
+*   [**PyYAML**](https://pypi.org/project/PyYAML/)
 
 **Note**: Please our modified Highway-env given in [**Heterogeneous_Highway_Env**](https://github.com/wuxiyang1996/Heterogeneous_Highway_Env)
 as there are major changes from the initial version of [**highway-env**](https://github.com/Farama-Foundation/HighwayEnv/tree/master). Also, 
@@ -61,14 +61,14 @@ pip install iPLAN
 
 # Running iPLAN
 In the configuration file `config/default.yaml`, set up environments needed for your experiment:
-* Set environment `env`: `MPE` for Non-cooperative Navigation and `highway` for Heterogeneous Highway
-* Set difficulty level `difficulty`: 
-  * `easy` for easy (Non-cooperative Navigation) or mild (Heterogeneous Highway) scenario.
+*   Set environment `env`: `MPE` for Non-cooperative Navigation and `highway` for Heterogeneous Highway
+*   Set difficulty level `difficulty`: 
+  *   `easy` for easy (Non-cooperative Navigation) or mild (Heterogeneous Highway) scenario.
   * `hard` for hard (Non-cooperative Navigation) or chaotic (Heterogeneous Highway) scenario.
-* Set `Behavior_enable: True`
-* Set `GAT_enable: True` and `GAT_use_behavior: True`
-* Set `soft_update_enable: True` and `behavior_fully_connected: False`
-* Run `python3 main.py`
+*   Set `Behavior_enable: True`
+*   Set `GAT_enable: True` and `GAT_use_behavior: True`
+*   Set `soft_update_enable: True` and `behavior_fully_connected: False`
+*   Run `python3 main.py`
 
 Results, including printed logs, saved models and tensorboard logger, are stored in the folder `results` 
 
@@ -77,34 +77,34 @@ When running experiments for ablation study, please only change the hyperparamet
 in the configuration file `config/default.yaml`
 and keep those the same as they are in the iPLAN experiment.
 ## Running IPPO
-* Set `Behavior_enable: False`
-* Set `GAT_enable: False` and `GAT_use_behavior: False`
-* Run `python3 main.py`
+*   Set `Behavior_enable: False`
+*   Set `GAT_enable: False` and `GAT_use_behavior: False`
+*   Run `python3 main.py`
 
 ## Running IPPO-BM
-* Set `Behavior_enable: True`
-* Set `GAT_enable: False` and `GAT_use_behavior: False`
-* Run `python3 main.py`
+*   Set `Behavior_enable: True`
+*   Set `GAT_enable: False` and `GAT_use_behavior: False`
+*   Run `python3 main.py`
 
 ## Running IPPO-GAT
-* Set `Behavior_enable: False`
-* Set `GAT_enable: True` and `GAT_use_behavior: True`
-* Run `python3 main.py`
+*   Set `Behavior_enable: False`
+*   Set `GAT_enable: True` and `GAT_use_behavior: True`
+*   Run `python3 main.py`
 
 ## Running iPLAN-Hard
-* Set `soft_update_enable: False`
-* Run `python3 main.py`
+*   Set `soft_update_enable: False`
+*   Run `python3 main.py`
 
 ## Running iPLAN-FC
-* Set `behavior_fully_connected: True`
-* Run `python3 main.py`
+*   Set `behavior_fully_connected: True`
+*   Run `python3 main.py`
 
 # Baselines
 Baselines used in this paper could be found in the `baselines`folder, where the organization of files is 
 similar to the main directory of iPLAN. Please change the environment setting in `config/default.yaml` 
 before experiments. No extra changes need.
-* [**QMIX**](https://github.com/oxwhirl/pymarl): Run `python3 baselines/QMIX/main.py`
-* [**MAPPO**](https://github.com/uoe-agents/epymarl): Run `python3 baselines/MAPPO/main.py`
+*   [**QMIX**](https://github.com/oxwhirl/pymarl): Run `python3 baselines/QMIX/main.py`
+*   [**MAPPO**](https://github.com/uoe-agents/epymarl): Run `python3 baselines/MAPPO/main.py`
 
 # Helper Functions
 Notebooks for helper function are given in `helper` folder.
@@ -112,9 +112,9 @@ Please follow the instructions below:
 ## Compute Navigation Metrics
 (Only for Heterogeneous Highway)
 In the configuration file `config/default.yaml`
-* Set `metrics_enable: True`
-* Set `num_test_episodes` larger than `batch_size_run`
-* Run `python3 main.py`
+*   Set `metrics_enable: True`
+*   Set `num_test_episodes` larger than `batch_size_run`
+*   Run `python3 main.py`
 
 Then you will get printed navigation metrics after the execution logs of each episode.
 
@@ -124,18 +124,18 @@ metrics from the printed log file (usually given in `results/sacred`).
 ## Generate Animation
 (Only for Heterogeneous Highway)
 In the configuration file `config/default.yaml`
-* Set `animation_enable: True`
-* (Recommended) Set `metrics_enable: True`, Set `num_test_episodes` larger than `batch_size_run`
-* Run `main.py`
+*   Set `animation_enable: True`
+*   (Recommended) Set `metrics_enable: True`, Set `num_test_episodes` larger than `batch_size_run`
+*   Run `main.py`
 
 Screenshots of the Heterogeneous Highway are stored in the `animation` folder. Use the notebook 
 `helper/Gif_helper.ipynb` to generate animation from screenshots.
 
 ## Plot Reward Curve
 The printed log file are usually given in `results/sacred`.
-* Choose the log file you want to recover, use the notebook `helper/RL_results_repack.ipynb`
+*   Choose the log file you want to recover, use the notebook `helper/RL_results_repack.ipynb`
 to convert the log file into `.csv` file.
-* Use the notebook `RL Visualization Helper - Highway.ipynb` (Heterogeneous Highway) or 
+*   Use the notebook `RL Visualization Helper - Highway.ipynb` (Heterogeneous Highway) or 
 `RL Visualization Helper - MPE.ipynb` (Non-cooperative Navigation) to plot the reward curve 
 from the generated `.csv` files for each approaches and scenarios.
 
