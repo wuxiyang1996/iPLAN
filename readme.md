@@ -17,20 +17,20 @@ and **https://github.com/carolinewang01/dm2**.
 The MAPPO baseline comes from **https://github.com/uoe-agents/epymarl**.
 
 # Table of Contents
-- [**Dependencies**](#Dependencies)
-- [**Installation**](#Installation)
-- [**Running iPLAN**](#Running-iPLAN)
-- [**Ablation Study**](#Ablation-Study)
-  - [**IPPO**](#Running-IPPO), [**IPPO-BM**](#Running-IPPO-BM), [**IPPO-GAT**](#Running-IPPO-GAT), 
+-   [**Dependencies**](#Dependencies)
+-   [**Installation**](#Installation)
+-   [**Running iPLAN**](#Running-iPLAN)
+-   [**Ablation Study**](#Ablation-Study)
+-   [**IPPO**](#Running-IPPO), [**IPPO-BM**](#Running-IPPO-BM), [**IPPO-GAT**](#Running-IPPO-GAT), 
   [**iPLAN-Hard**](#Running-iPLAN-Hard), [**iPLAN-FC**](#Running-iPLAN-FC)
-- [**Baselines**](#Baselines)
-- [**Helper Functions**](#Helper-Functions)
-  - [**Compute Navigation Metrics**](#Compute-Navigation-Metrics)
-  - [**Generate Animation**](#Generate-Animation)
-  - [**Plot Reward Curve**](#Plot-Reward-Curve)
-- [**Results**](#Results)
-- [**Animation**](#Animation)
-- [**Citation**](#Citation)
+-   [**Baselines**](#Baselines)
+-   [**Helper Functions**](#Helper-Functions)
+  -   [**Compute Navigation Metrics**](#Compute-Navigation-Metrics)
+  -   [**Generate Animation**](#Generate-Animation)
+  -   [**Plot Reward Curve**](#Plot-Reward-Curve)
+-   [**Results**](#Results)
+-   [**Animation**](#Animation)
+-   [**Citation**](#Citation)
 
 # Dependencies
 * [**PyTorch**](https://pytorch.org/) (1.13.1 + cu116) (GPU)
