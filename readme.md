@@ -1,3 +1,7 @@
+
+[![Downloads](https://img.shields.io/pypi/dm/iPLAN)](https://pypi.org/project/iPLAN/)
+![GitHub](https://img.shields.io/github/license/wuxiyang1996/iPLAN)
+
 <p align="center">
     <img src="animation/iPLAN_Hetero_H_5_90.0_21.81.gif"><br/>
 </p>
