@@ -12,7 +12,7 @@ This repository is the codebase for our paper.
 
 [**iPLAN: Intent-Aware Planning in Heterogeneous Traffic via Distributed Multi-Agent Reinforcement Learning**](https://arxiv.org/abs/2306.06236)
 
-This repository was originally **forked from https://github.com/oxwhirl/pymarl** 
+This repository was originally forked from **https://github.com/oxwhirl/pymarl** 
 and **https://github.com/carolinewang01/dm2**. 
 The MAPPO baseline comes from **https://github.com/uoe-agents/epymarl**.
 
