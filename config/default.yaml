@@ -33,8 +33,8 @@ local_results_path: "results" # Path for local results
 
 # --- RL hyperparameters ---
 gamma: 0.99
-batch_size: 7 # 255 # Number of episodes to train on # CHANGE NAME TO MINIBATCH SIZE (Recommend: 255)
-buffer_size: 8 # 256 #  # Size of the replay buffer (Recommend: 256)
+batch_size: 255 # 255 # Number of episodes to train on # CHANGE NAME TO MINIBATCH SIZE (Recommend: 255)
+buffer_size: 256 # 256 #  # Size of the replay buffer (Recommend: 256)
 lr: 0.0005 # Learning rate for agents
 critic_lr: 0.0005 # Learning rate for critics
 optim_alpha: 0.99 # RMSProp alphas
