@@ -54,7 +54,7 @@ the code given in `envs/mpe` folder.
 # Installation
 First, install dependencies
 ```angular2html
-pip install stable-baselines3[extra] pyyaml sacred
+pip install stable-baselines3[extra] pyyaml sacred gym tensorboard_logger
 ```
 Then install our forked version of Highway-env
 ```angular2html
