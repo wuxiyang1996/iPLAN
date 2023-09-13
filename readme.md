@@ -197,10 +197,10 @@ shows 5 such learning agents from their respective viewpoints.
 
 # Citation
 ```
-@article{wu2023iplan,
-  title={iPLAN: Intent-Aware Planning in Heterogeneous Traffic via Distributed Multi-Agent Reinforcement Learning},
-  author={Wu, Xiyang and Chandra, Rohan and Guan, Tianrui and Bedi, Amrit Singh and Manocha, Dinesh},
-  journal={arXiv preprint arXiv:2306.06236},
+@inproceedings{wu2023intent,
+  title={Intent-Aware Planning in Heterogeneous Traffic via Distributed Multi-Agent Reinforcement Learning},
+  author={Wu, Xiyang and Chandra, Rohan and Guan, Tianrui and Bedi, Amrit and Manocha, Dinesh},
+  booktitle={7th Annual Conference on Robot Learning},
   year={2023}
 }
 ```
