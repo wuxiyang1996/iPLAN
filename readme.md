@@ -15,6 +15,8 @@ This repository is the codebase for our paper.
 This repository was originally forked from **https://github.com/oxwhirl/pymarl** 
 and **https://github.com/carolinewang01/dm2**. 
 The MAPPO baseline comes from **https://github.com/uoe-agents/epymarl**.
+The GAT-RRN structure is adapted from **https://github.com/starry-sky6688/MARL-Algorithms**.
+The instant incentive inference module is adapted from **https://github.com/usaywook/gin**.
 
 # About
 *   Multi-agent Reinforcement Learning
