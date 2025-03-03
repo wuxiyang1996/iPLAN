@@ -142,7 +142,11 @@ class Behavior_policy:
             agent_history = agent_history.reshape(n_thread, num_history, self.max_history_len, max_vehicle_num, obs_dim)
 
             cut_len = (num_history - 1) * self.max_history_len
-            mask_cut = agent_terminate[:, :cut_len, i, 0]
+
+            if self.args.env == "MPE":
+                mask_cut = 1 - agent_terminate[:, :cut_len, i, 0]
+            else:
+                mask_cut = agent_terminate[:, :cut_len, i, 0]
 
             # Mask over given episode
             mask = mask_cut.reshape(n_thread, cut_len, 1, 1).tile(1, 1, max_vehicle_num, obs_dim)
