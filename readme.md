@@ -197,6 +197,10 @@ shows 5 such learning agents from their respective viewpoints.
     (Num of agents succeed: 3, Avg. survival time: 67.8, Avg. speed: 24.9).</em>
 </p>
 
+# Acknowledgement
+
+We thank Haoxiang Zhao (@zhx0506) and other community members' effort in maintaining this repo!
+
 # Citation
 ```
 @inproceedings{wu2023intent,
