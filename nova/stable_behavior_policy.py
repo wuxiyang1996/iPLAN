@@ -186,7 +186,7 @@ class Behavior_policy:
             # => [n_thread, num_history, max_history_len, max_vehicle_num, obs_dim]
             agent_history = history[:, :, i]
             agent_behavior_latent = behavior_latent[:, :, i]
-            mask = agent_terminate[:, :, i, 0]
+            mask = 1 - agent_terminate[:, :, i, 0]
 
             # Prev latent / Updated latent: [n_thread, max_vehicle_num, latent_dim]
             latent = torch.zeros((n_thread, max_vehicle_num, self.latent_dim)).to(self.device)
