@@ -38,6 +38,7 @@ The idea of the instant incentive inference module is adapted from **https://git
   - [**Plot Reward Curve**](#Plot-Reward-Curve)
 -   [**Results**](#Results)
 -   [**Animation**](#Animation)
+-   [**Acknowledgement**](#Acknowledgement)
 -   [**Citation**](#Citation)
 
 # Dependencies
